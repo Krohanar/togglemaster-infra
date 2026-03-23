@@ -1,0 +1,1 @@
+# Backend S3 será configurado depois que o bucket de state for criado.
