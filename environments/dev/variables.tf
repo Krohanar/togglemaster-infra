@@ -62,3 +62,44 @@ variable "max_size" {
   description = "Maximum node group size"
   type        = number
 }
+
+variable "db_name" {
+  description = "PostgreSQL database name"
+  type        = string
+}
+
+variable "db_username" {
+  description = "PostgreSQL username"
+  type        = string
+}
+
+variable "auth_master_key" {
+  description = "Master key for auth-service"
+  type        = string
+  sensitive   = true
+}
+
+variable "db_instance_class" {
+  description = "RDS instance class"
+  type        = string
+}
+
+variable "db_allocated_storage" {
+  description = "RDS storage size in GB"
+  type        = number
+}
+
+variable "sqs_queue_name" {
+  type        = string
+  description = "Main SQS queue name"
+}
+
+variable "dynamodb_table_name" {
+  description = "DynamoDB table name for analytics"
+  type        = string
+}
+
+variable "redis_node_type" {
+  description = "ElastiCache Redis node type"
+  type        = string
+}

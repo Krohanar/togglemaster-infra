@@ -32,3 +32,42 @@ output "eks_cluster_endpoint" {
   description = "EKS cluster endpoint for dev environment"
   value       = module.eks.cluster_endpoint
 }
+
+output "rds_endpoint" {
+  description = "RDS endpoint for dev environment"
+  value       = module.rds.db_instance_endpoint
+}
+
+output "rds_port" {
+  description = "RDS port for dev environment"
+  value       = module.rds.db_instance_port
+}
+
+output "auth_service_secret_name" {
+  description = "Secrets Manager secret name for auth-service"
+  value       = module.secrets.auth_service_secret_name
+}
+
+output "sqs_queue_url" {
+  value = module.sqs.queue_url
+}
+
+output "sqs_queue_arn" {
+  value = module.sqs.queue_arn
+}
+
+output "dynamodb_table_name" {
+  value = module.dynamodb.table_name
+}
+
+output "dynamodb_table_arn" {
+  value = module.dynamodb.table_arn
+}
+
+output "redis_address" {
+  value = module.elasticache.redis_address
+}
+
+output "redis_port" {
+  value = module.elasticache.redis_port
+}
